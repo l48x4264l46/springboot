@@ -1,0 +1,27 @@
+server:
+  port: 9090
+spring:
+  server:
+    name: study-tdd
+  datasource:
+    druid:
+      # jdbc 链接
+      url: jdbc:mysql://192.168.137.2:13306/tdd?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      # 数据库用户
+      username: root
+      # 数据库密码
+      password: root
+      # 数据库驱动名称
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 初始化连接池连接数量
+      initial-size: 10
+      # 最大活跃连接数
+      max-active: 200
+      # 最小活跃数量，与initial-size相同
+      min-idle: 10
+      # 最大等待时间（毫秒）
+      max-wait: 30000
+mybatis:
+  type-aliases-package: cn.liuxianglin.study.springboot.entity
+  configuration:
+    map-underscore-to-camel-case: true
