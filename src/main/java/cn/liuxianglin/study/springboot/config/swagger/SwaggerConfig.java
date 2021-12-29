@@ -34,11 +34,13 @@ public class SwaggerConfig {
      */
     @Bean
     public Docket docket() {
-        return new Docket(DocumentationType.OAS_30)
+        return new Docket(DocumentationType.SWAGGER_2)
                 // 指定构建api文档的详细信息的方法：apiInfo()
-                .apiInfo(apiInfo()).select()
+                .apiInfo(apiInfo())
+                .select()
                 // 指定要生成api接口的包路径
-                .apis(RequestHandlerSelectors.basePackage("cn.liuxianglin.study.springboot")).paths(PathSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("cn.liuxianglin.study.springboot"))
+                .paths(PathSelectors.any())
                 //可以根据url路径设置哪些请求加入文档，忽略哪些请求
                 .build();
     }

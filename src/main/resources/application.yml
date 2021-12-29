@@ -6,7 +6,7 @@ spring:
   datasource:
     druid:
       # jdbc 链接
-      url: jdbc:mysql://192.168.137.2:13306/tdd?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+      url: jdbc:mysql://127.0.0.1:3306/springboot?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
       # 数据库用户
       username: root
       # 数据库密码
