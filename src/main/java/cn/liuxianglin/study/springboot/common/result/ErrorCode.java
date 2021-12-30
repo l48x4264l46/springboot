@@ -10,7 +10,9 @@ package cn.liuxianglin.study.springboot.common.result;
  * @since 1.0
  */
 public enum ErrorCode {
-    SUCCESS(200, "成功"), SYS_ERROR(500, "系统异常"), PARAM_ERROR(400, "参数错误");
+    SUCCESS(200, "成功"),
+    SYS_ERROR(500, "系统异常"),
+    PARAM_ERROR(400, "请求错误");
 
     private final int code;
     private final String msg;
